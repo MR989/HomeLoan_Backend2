@@ -10,6 +10,7 @@ public class HomeloanApplication {
 		SpringApplication.run(HomeloanApplication.class, args);
 		
 		System.out.println("hello");
+		System.out.println("Rahuraman N");
 	}
 
 }
