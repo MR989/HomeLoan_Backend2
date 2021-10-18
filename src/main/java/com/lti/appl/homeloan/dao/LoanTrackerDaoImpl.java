@@ -40,7 +40,7 @@ public class LoanTrackerDaoImpl extends BaseRepository implements LoanTrackerDao
 		Query query = entityManager.createQuery("UPDATE LOANTRACKER l SET l.verificationStatus='Approved' " + "WHERE l.trackerId= :tid");
 		query.setParameter("tid", loanTracker.getTrackerId());
 		query.executeUpdate();
-		/*Query query1 = entityManager.createQuery("UPDATE LOANTRACKER l SET l.accountNum= :acno " + "WHERE l.trackerId= :tid");
+		Query query1 = entityManager.createQuery("UPDATE LOANTRACKER l SET l.accountNum= :acno " + "WHERE l.trackerId= :tid");
 		query1.setParameter("acno", acnum);
 		query1.setParameter("tid", loanTracker.getTrackerId());
 		query1.executeUpdate();
@@ -51,7 +51,6 @@ public class LoanTrackerDaoImpl extends BaseRepository implements LoanTrackerDao
 		query3.setParameter("amt", loanTracker.getBalance());
 		query3.setParameter("tid", loanTracker.getTrackerId());
 		query3.executeUpdate();
-		*/
 		accountnum++;
 	}
 	@Transactional
